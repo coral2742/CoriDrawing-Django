@@ -1,1 +1,1 @@
-web: gunicorn coridrawing.wsgi --log-file -
+web: gunicorn portfolio_Coral.wsgi --log-level=debug --log-file -
