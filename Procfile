@@ -1,1 +1,1 @@
-web: gunicorn coridrawing.wsgi --log-level=debug --log-file -
+web: gunicorn coridrawing.wsgi --log-file -
