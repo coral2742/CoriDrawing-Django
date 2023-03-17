@@ -1,6 +1,23 @@
-from django.db import models
+from django import forms
 
-# Create your models here.
+from .models import DrawingItem
+
+
+
+class DrawingItemForm(forms.ModelForm):
+    class Meta:
+        model = DrawingItem
+        fields = ("title", "type","description", "image", "video", 
+        "url_1_name", "url_1",)
+
+        def save(self. commit=True):
+            drawing = super().save(commit=False)
+            if commit:
+                drawing.save()
+            return drawing
+
+
+
 class DrawingItem(models.Model):
     title = models.CharField("Title", max_length=200, unique=True)
     type = models.CharField("Type", max_length=200, default="Acuarela")
