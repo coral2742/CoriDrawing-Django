@@ -1,9 +1,18 @@
 from django.db import models
 
 # Create your models here.
+
+class DrawingCategory(models.Model):
+    title = title = models.CharField("Title", max_length=200, unique=True)
+    description = models.TextField("Description", max_length=500, blank=True)
+    priority = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.title}"
+
 class DrawingItem(models.Model):
     title = models.CharField("Title", max_length=200, unique=True)
-    type = models.CharField("Type", max_length=200, default="Acuarela")
+    type = models.ForeignKey(DrawingCategory, on_delete=models.CASCADE)
     description = models.TextField("Description", max_length=500, blank=True)
     image = models.ImageField(upload_to="images", default="images/Error404.jpg")
     video = models.FileField(upload_to="videos", blank=True)

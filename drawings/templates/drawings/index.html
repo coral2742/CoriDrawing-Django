@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load static %}
+
 <header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url(https://raw.githubusercontent.com/coral2742/CoriDrawing/gh-pages/Imagen/Pinceles.jpg);">
     <h1 style="padding-top: 150px; color: white;">Bienvenid@ a Cori Drawing🎨</h1>
     <h3 style="padding: 20px; color: white;">Aquí guardo algunos de los dibujos que voy haciendo</h3>
@@ -42,51 +44,19 @@
         <div class="container text-center" style="background-color: white; padding: 60px;">
             <div class="row justify-content-md-center">
 
+                {% for draw in drawings %}
+                    <div class="col-sm-4" style="text-align: center;">
+                        <div class="card" style="justify-content: center; align-items: center; border-color: white;">
+                            <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        </div>
+                    </div>
 
-                <div class="col-sm-4" style="text-align: center;">
-                    <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                        <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4" style="text-align: center;">
-                    <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                        <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4" style="text-align: center;">
-                    <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                        <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-4" style="text-align: center;">
-                    <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                        <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
+                {% endfor%}
 
 
             </div>
