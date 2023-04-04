@@ -81,14 +81,25 @@ WSGI_APPLICATION = "coridrawing.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+# DATABASES["default"].update(dj_database_url.config(conn_max_age=600))
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nhcrzkjj',
+        'USER': 'nhcrzkjj',
+        'PASSWORD': 'KVeDY8gc2ZoTcCKTul8CKiGUgVOmwPh7',
+        'HOST': 'mel.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
-
-DATABASES["default"].update(dj_database_url.config(conn_max_age=600))
 
 
 # Password validation
@@ -125,7 +136,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/drawings/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

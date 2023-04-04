@@ -43,13 +43,13 @@
         <div class="container text-center" style="background-color: white; padding: 60px;">
             <div class="row justify-content-md-center">
 
-                {% for category in categories %}
+                {% for draw in category %}
                     <div class="col-sm-4" style="text-align: center;">
                         <div class="card" style="justify-content: center; align-items: center; border-color: white;">
                             <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
                         <div class="card-body">
-                            <h5 class="card-title">{{ category.title }}</h5>
-                            <p class="card-text">{{ category.description }}</p>
+                            <h5 class="card-title">{{ draw.title }}</h5>
+                            <p class="card-text">{{ draw.description }}</p>
                             <a href="#" class="btn btn-primary">Ver más</a>
                         </div>
                         </div>
@@ -66,6 +66,3 @@
 </body>
 
 {% endblock content %}
-
-
-

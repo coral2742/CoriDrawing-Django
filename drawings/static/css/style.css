@@ -1,3 +1,8 @@
+* { 
+    padding:0;
+    margin:0;
+}
+
 header {
     height: 500px;
     background: rgb(255, 0, 204);
@@ -13,3 +18,57 @@ header {
 
     text-align: center;
 }
+
+.coral h2 {
+    font-size: 10px;
+}
+
+
+.creditos h2{
+    font-size: 20px;
+}
+
+
+footer{
+    text-align: right;
+    padding: 30px;
+    margin-bottom: -10px;
+    background: linear-gradient(to right, #a3a3ff, #ffa6ed);
+}
+
+.textosocial {
+    height: 50px;
+}
+
+
+.socialcont{
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+}
+
+.social {
+    display: inline-block;
+    padding-right: 10px;
+    margin: 0;
+}
+
+
+.socialcont img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: linear-gradient(to top, #33339954, #ff00cc6e);
+    border-radius: 30%;
+}
+
+.socialcont img:hover {
+    background: linear-gradient(to top, #54549754, #ff82e66e);
+}
+
