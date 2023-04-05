@@ -46,7 +46,14 @@
                 {% for category in categories %}
                     <div class="col-sm-4" style="text-align: center;">
                         <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                            <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
+                            <!-- <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto category"> -->
+                            <div class="imagen-port">
+                                <img src="https://picsum.photos/300" class="figure-img img-fluid" alt="foto category">
+                                <div class="hover-galeria">
+                                    <p class="category-text">{{ category.title }}</p>
+                                </div>
+                            </div>
+
                         <div class="card-body">
                             <h5 class="card-title">{{ category.title }}</h5>
                             <p class="card-text">{{ category.description }}</p>
