@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, View
 from django.shortcuts import get_object_or_404
 
 from .models import DrawingItem, DrawingCategory
