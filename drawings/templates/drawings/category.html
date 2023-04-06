@@ -4,11 +4,8 @@
 
 
 <header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url(https://raw.githubusercontent.com/coral2742/CoriDrawing/gh-pages/Imagen/Pinceles.jpg);">
-    <h1 style="padding-top: 150px; color: white;">Bienvenid@ a Cori Drawing🎨</h1>
-    <h3 style="padding: 20px; color: white;">Aquí guardo algunos de los dibujos que voy haciendo</h3>
-
+    <h1 style="padding-top: 150px; color: white;">{{ category.title }}🎨</h1>
     <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff; "></path></svg></div>
-
 </header>
 
 
@@ -17,52 +14,105 @@
 
 
 <body>
-    <div class="container text-center" style="text-align: center; align-items: center;">
+    <div class="container-draws text-center" style="text-align: center; align-items: center; padding-bottom: 20px;">
         <div class="row align-items-center">
-            <div class="col-sm">
+            <!-- <div class="col-sm">
                 <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
-            </div>
-            <div class="col-sm" >
-                <h1 style="text-align: center">Sobre mí</h1>
-                <h4 style="text-align: justify">Me llamo Coral, soy estudiante de Ingeniería Informática del Software y en mi tiempo libre me gusta dibujar y pintar entre otras cosas.
-                    He desarrollado esta página web como portfolio para mostrar mis dibujos, pero también puedes seguirme en mis redes sociales para no 
-                    perderte nada.
-                </h4>
+            </div> -->
+            <div class="col-sm container-fluid" >
+                <h4 style="text-align: justify; margin-left:10%; margin-right:10%;" >{{ category.description }}</h4>
+
             </div>
 
 
         </div>
 
     </div>
-
 
 
     <div class="container-fluid text-center" style="background-color:rgba(235, 45, 73, 0.36);">
-        <h1>Categorías</h1>
+        {% if draws %}
+            <h1>Dibujos con {{ category.title }}</h1>
 
-        <div class="container text-center" style="background-color: white; padding: 60px;">
-            <div class="row justify-content-md-center">
+            
 
-                {% for draw in category %}
-                    <div class="col-sm-4" style="text-align: center;">
-                        <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                            <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto cori">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ draw.title }}</h5>
-                            <p class="card-text">{{ draw.description }}</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
+
+            <div class="container text-center" style="background-color: white; padding: 60px;">
+                <div class="row justify-content-md-center">
+
+                    {% for drawing in draws %}
+                        <div class="col-sm-4" style="text-align: center;">
+                            <div class="card" style="justify-content: center; align-items: center; border-color: white;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ drawing.title }}</h5>
+                                    <p class="card-text">{{ drawing.description }}</p>
+                                    <img src="https://picsum.photos/500" class="img-fluid" alt="{{ draw.title }} photo">
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
 
-                {% endfor%}
+                    {% endfor %}
 
-
+                </div>
             </div>
-        </div>
 
-
+        {% else %}
+            <h1>No hay dibujos disponibles en la categoría "{{ category.title }}"</h1>
+        {% endif %}
     </div>
+
+
 </body>
 
 {% endblock content %}
+
+
+{% block footer %}
+
+
+<footer>
+    <div class="textosocial">
+        <h3>¡No olvides seguirme en redes sociales!</h3>
+    </div>
+
+    <div class="socialcont">
+      <div class="social">
+        <a href="https://www.instagram.com/cori.drawing/">
+          <img src=".../static/Images/Instagram.svg" alt="Instagram logo" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="social">
+        <a href="https://www.facebook.com/cori.drawing/">
+          <img src="./drawings/static/Images/Facebook.svg" alt="Facebook logo" class="img-fluid">
+        </a>
+      </div>
+
+      <div class="social">
+        <a href="https://twitter.com/CoriDrawing">
+          <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo" class="img-fluid">
+
+        </a>
+      </div>
+
+      <div class="social">
+        <a href="mailto: coridrawing@gmail.com">
+          <img src="./drawings/static/Images/Mail.svg" alt="Mail logo" class="img-fluid">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="creditos">
+      <h2 class="titulo-final">&copy;Cori Drawing <br> Página desarrollada con ❤️ por Coral Izquierdo Muñiz</h2>
+    </div>
+
+
+  </footer>
+
+
+  {% endblock footer %}
+
+
+

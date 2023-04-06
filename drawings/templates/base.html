@@ -18,29 +18,29 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" style="background:white;">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#" style="color:white;">Cori Drawing</a>
+      <a class="navbar-brand" href="{% url 'index' %}" style="color:white;">Cori Drawing</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color:white;">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}" style="color:white;">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" style="color:white;">Sobre mí</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white;">Acuarela</a>
+            <a class="nav-link" href="{% url 'draws' "acuarela" %}" style="color:white;">Acuarela</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white;">Lápiz</a>
+            <a class="nav-link" href="{% url 'draws' "lápiz" %}" style="color:white;">Lápiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white;">Digital</a>
+            <a class="nav-link" href="{% url 'draws' "digital" %}" style="color:white;">Digital</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white;">Tinta</a>
+            <a class="nav-link" href="{% url 'draws' "tinta" %}" style="color:white;">Tinta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white;">Modelos 3D</a>
+            <a class="nav-link" href="{% url 'draws' "modelos3d" %}">Modelos 3D</a>
           </li>
         </ul>
       </div>
@@ -59,7 +59,7 @@
 
   {% block footer %}
 
-  <footer>
+  <footer class="d-flex flex-column" style="padding-left: 5%; padding-right: 5%; min-height: 500px;">
     <div class="textosocial">
         <h3>¡No olvides seguirme en redes sociales!</h3>
     </div>
@@ -67,13 +67,13 @@
     <div class="socialcont">
       <div class="social">
         <a href="https://www.instagram.com/cori.drawing/">
-          <img src="./drawings/static/Images/Instagram.svg" alt="" class="img-fluid">
+          <img src="./drawings/static/Images/Instagram.svg" alt="Instagram logo" class="img-fluid">
         </a>
       </div>
 
       <div class="social">
         <a href="https://www.facebook.com/cori.drawing/">
-          <img src="./drawings/static/Images/Facebook.svg" alt="" class="img-fluid">
+          <img src="./drawings/static/Images/Facebook.svg" alt="Facebook logo" class="img-fluid">
         </a>
       </div>
 
@@ -86,7 +86,7 @@
 
       <div class="social">
         <a href="mailto: coridrawing@gmail.com">
-          <img src="./drawings/static/Images/Mail.svg" alt="" class="img-fluid">
+          <img src="./drawings/static/Images/Mail.svg" alt="Mail logo" class="img-fluid">
         </a>
       </div>
 

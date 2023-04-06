@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 class DrawingCategory(models.Model):
-    title = title = models.CharField("Title", max_length=200, unique=True)
+    title = models.CharField("Title", max_length=200, unique=True)
+    short_title = models.CharField("Short title", max_length=200)
     description = models.TextField("Description", max_length=500, blank=True)
     priority = models.PositiveIntegerField(default=0)
 

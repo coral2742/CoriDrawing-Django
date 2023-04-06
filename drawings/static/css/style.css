@@ -14,6 +14,16 @@ header {
   text-align: center;
 }
 
+.container-draws {
+  min-height: 100vh;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+
 .coral h2 {
   font-size: 10px;
 }
@@ -173,5 +183,25 @@ footer {
     font-size: 40px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+
+  .boton{
+    background: linear-gradient(to right, #3333996c, #ff00cc5d);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  .boton:hover{
+    background: linear-gradient(to left, #3333996c, #ff00cc5d);
+    transition: background 1s;
+    color: white;
   }
   

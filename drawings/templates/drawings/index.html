@@ -15,45 +15,45 @@
 
 
 <body>
-    <div class="container text-center" style="text-align: center; align-items: center;">
+    <div class="container text-center" style="text-align: center; align-items: center; padding: 20px;">
         <div class="row align-items-center">
-            <div class="col-sm">
-                <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
-            </div>
-            <div class="col-sm" >
-                <h1 style="text-align: center">Sobre mí</h1>
-                <h4 style="text-align: justify">Me llamo Coral, soy estudiante de <span class="underline-main">Ingeniería Informática del Software</span> y en mi tiempo libre me gusta dibujar y pintar entre otras cosas.
-                    He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
-                    perderte nada.
-                </h4>
-                <div class="socialcont">
-                    <div class="social">
-                      <a href="https://www.instagram.com/cori.drawing/">
-                        <img src="./drawings/static/Images/Instagram.svg" alt="">
-                      </a>
-                    </div>
-              
-                    <div class="social">
-                      <a href="https://www.facebook.com/cori.drawing/">
-                        <img src="./drawings/static/Images/Facebook.svg" alt="">
-                      </a>
-                    </div>
-              
-                    <div class="social">
-                      <a href="https://twitter.com/CoriDrawing">
-                        <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo">
-              
-                      </a>
-                    </div>
-              
-                    <div class="social">
-                      <a href="mailto: coridrawing@gmail.com">
-                        <img src="./drawings/static/Images/Mail.svg" alt="">
-                      </a>
-                    </div>
-              
-                  </div>
-            </div>
+          <div class="col-sm">
+              <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
+          </div>
+          <div class="col-sm" >
+              <h1 style="text-align: center">Sobre mí</h1>
+              <h4 style="text-align: justify">Me llamo Coral, soy estudiante de <span class="underline-main">Ingeniería Informática del Software</span> y en mi tiempo libre me gusta dibujar y pintar entre otras cosas. <br><br>
+                  He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
+                  perderte nada.
+              </h4>
+              <div class="socialcont">
+                <div class="social">
+                  <a href="https://www.instagram.com/cori.drawing/">
+                    <img src="./drawings/static/Images/Instagram.svg" alt="Instagram logo" class="img-fluid">
+                  </a>
+                </div>
+          
+                <div class="social">
+                  <a href="https://www.facebook.com/cori.drawing/">
+                    <img src="./drawings/static/Images/Facebook.svg" alt="Facebook logo" class="img-fluid">
+                  </a>
+                </div>
+          
+                <div class="social">
+                  <a href="https://twitter.com/CoriDrawing">
+                    <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo" class="img-fluid">
+          
+                  </a>
+                </div>
+          
+                <div class="social">
+                  <a href="mailto: coridrawing@gmail.com">
+                    <img src="./drawings/static/Images/Mail.svg" alt="Mail logo" class="img-fluid">
+                  </a>
+                </div>
+          
+              </div>
+          </div>
 
 
         </div>
@@ -62,7 +62,7 @@
 
 
 
-    <div class="container-fluid text-center" style="background-color:rgba(235, 45, 73, 0.36);">
+    <div class="container-fluid text-center" style="background-color:#3333996c;">
         <h1>Categorías</h1>
 
         <div class="container text-center" style="background-color: white; padding: 60px;">
@@ -72,13 +72,16 @@
                     <div class="col-sm-4" style="text-align: center;">
                         <div class="card" style="justify-content: center; align-items: center; border-color: white;">
                             <!-- <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto category"> -->
-                            <div class="imagen-port">
-                                <img src="https://picsum.photos/300" class="figure-img img-fluid" alt="foto category">
-                                <div class="hover-galeria">
-                                    <p class="category-text">{{ category.title }}</p>
-                                </div>
-                            </div>
+                            <a href="{% url 'draws' category.title %}">
+                              <div class="imagen-port">
+                                
+                                  <img src="https://picsum.photos/300" class="figure-img img-fluid" alt="foto category" href="{% url 'index' %}">
 
+                                  <div class="hover-galeria">
+                                      <p class="category-text">{{ category.title }}</p>
+                                  </div>
+                              </div>
+                            </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ category.title }}</h5>
                             <p class="card-text">{{ category.description }}</p>
