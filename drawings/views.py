@@ -23,12 +23,12 @@ class DrawingListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        category_title = self.kwargs["title"]
-        category = get_object_or_404(DrawingCategory, title__iexact=category_title)
+        category_short_title = self.kwargs["short_title"]
+        category = get_object_or_404(DrawingCategory, short_title__iexact=category_short_title)
         context['category'] = category
         return context
 
     def get_queryset(self):
-        category_title = self.kwargs["title"]
-        queryset = DrawingItem.objects.filter(type__title__iexact=category_title)
+        category_short_title = self.kwargs["short_title"]
+        queryset = DrawingItem.objects.filter(type__short_title__iexact=category_short_title)
         return queryset

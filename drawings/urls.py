@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path("", view=views.Index.as_view(), name="index"),
-    re_path(r'^category/(?P<title>[\w-]+)/$', views.DrawingListView.as_view(), name='draws'),
+    re_path(r'^category/(?P<short_title>[\w-]+)/$', views.DrawingListView.as_view(), name='draws'),
 ]

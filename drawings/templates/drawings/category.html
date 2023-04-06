@@ -14,53 +14,50 @@
 
 
 <body>
-    <div class="container-draws text-center" style="text-align: center; align-items: center; padding-bottom: 20px;">
-        <div class="row align-items-center">
-            <!-- <div class="col-sm">
-                <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
-            </div> -->
-            <div class="col-sm container-fluid" >
-                <h4 style="text-align: justify; margin-left:10%; margin-right:10%;" >{{ category.description }}</h4>
+  <div class="container-draws text-center" style="text-align: center; align-items: center; padding-bottom: 20px;">
+    <div class="row align-items-center">
+      <div class="col-sm">
+          <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
+      </div>
+      <div class="col-sm container-fluid" >
+          <h4 style="text-align: justify; margin-left:10%; margin-right:10%;" >{{ category.description }}</h4>
 
-            </div>
+      </div>
 
-
-        </div>
 
     </div>
 
-
-    <div class="container-fluid text-center" style="background-color:rgba(235, 45, 73, 0.36);">
-        {% if draws %}
-            <h1>Dibujos con {{ category.title }}</h1>
-
-            
+  </div>
 
 
-            <div class="container text-center" style="background-color: white; padding: 60px;">
-                <div class="row justify-content-md-center">
+  <div class="container-fluid text-center" style="background-color:rgba(235, 45, 73, 0.36);">
+      {% if draws %}
+          <h1>Dibujos con {{ category.title }}</h1>
 
-                    {% for drawing in draws %}
-                        <div class="col-sm-4" style="text-align: center;">
-                            <div class="card" style="justify-content: center; align-items: center; border-color: white;">
+          <div class="container text-center" style="background-color: white; padding: 60px;">
+              <div class="row justify-content-md-center">
 
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ drawing.title }}</h5>
-                                    <p class="card-text">{{ drawing.description }}</p>
-                                    <img src="https://picsum.photos/500" class="img-fluid" alt="{{ draw.title }} photo">
-                                </div>
-                            </div>
-                        </div>
+                  {% for drawing in draws %}
+                      <div class="col-sm-4" style="text-align: center;">
+                          <div class="card" style="justify-content: center; align-items: center; border-color: white;">
 
-                    {% endfor %}
+                              <div class="card-body">
+                                  <h5 class="card-title">{{ drawing.title }}</h5>
+                                  <p class="card-text">{{ drawing.description }}</p>
+                                  <img src="https://picsum.photos/500" class="img-fluid" alt="{{ draw.title }} photo">
+                              </div>
+                          </div>
+                      </div>
 
-                </div>
-            </div>
+                  {% endfor %}
 
-        {% else %}
-            <h1>No hay dibujos disponibles en la categoría "{{ category.title }}"</h1>
-        {% endif %}
-    </div>
+              </div>
+          </div>
+
+      {% else %}
+          <h1>No hay dibujos disponibles en la categoría de {{ category.title }}</h1>
+      {% endif %}
+  </div>
 
 
 </body>
@@ -68,51 +65,6 @@
 {% endblock content %}
 
 
-{% block footer %}
-
-
-<footer>
-    <div class="textosocial">
-        <h3>¡No olvides seguirme en redes sociales!</h3>
-    </div>
-
-    <div class="socialcont">
-      <div class="social">
-        <a href="https://www.instagram.com/cori.drawing/">
-          <img src=".../static/Images/Instagram.svg" alt="Instagram logo" class="img-fluid">
-        </a>
-      </div>
-
-      <div class="social">
-        <a href="https://www.facebook.com/cori.drawing/">
-          <img src="./drawings/static/Images/Facebook.svg" alt="Facebook logo" class="img-fluid">
-        </a>
-      </div>
-
-      <div class="social">
-        <a href="https://twitter.com/CoriDrawing">
-          <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo" class="img-fluid">
-
-        </a>
-      </div>
-
-      <div class="social">
-        <a href="mailto: coridrawing@gmail.com">
-          <img src="./drawings/static/Images/Mail.svg" alt="Mail logo" class="img-fluid">
-        </a>
-      </div>
-
-    </div>
-
-    <div class="creditos">
-      <h2 class="titulo-final">&copy;Cori Drawing <br> Página desarrollada con ❤️ por Coral Izquierdo Muñiz</h2>
-    </div>
-
-
-  </footer>
-
-
-  {% endblock footer %}
 
 
 
