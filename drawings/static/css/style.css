@@ -1,49 +1,56 @@
 * { 
-    padding:0;
-    margin:0;
+  padding:0;
+  margin:0;
 }
 
 header {
-    height: 500px;
-    background: #ff00cc;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-
-    text-align: center;
+  height: 500px;
+  background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  text-align: center;
 }
 
 .coral h2 {
-    font-size: 10px;
+  font-size: 10px;
 }
 
+.underline-main {
+  background-image: linear-gradient(to right, #3333996c, #ff00cc5d);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline-main:hover {
+  color: white;
+  background-size: 100% 88%;
+}
 
 
 footer {
-    background-color: #333;
-    color: white;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #333;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .textosocial {
-    height: 50px;
+  height: 50px;
 }
 
 .creditos{
-    text-align: right;
+  text-align: right;
 }
 
 .creditos h2{
-    font-size: 20px;
+  font-size: 20px;
 }
 
 
@@ -51,43 +58,37 @@ footer {
 
 
 .socialcont{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .socialcont img{
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .social img:hover {
-    margin-top: -30px;
+  margin-top: -30px;
 }
 
 .imagen-port:hover img {
-    transform: scale(1.1) saturate(1.5);
-    opacity: 0.8;
-  }
-
-
-
-
-.error {
-    height: 150px;
+  transform: scale(1.1) saturate(1.5);
+  opacity: 0.8;
 }
+
 
 
 

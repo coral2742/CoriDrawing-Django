@@ -56,6 +56,9 @@
 
   {% endblock content %}
 
+
+  {% block footer %}
+
   <footer>
     <div class="textosocial">
         <h3>¡No olvides seguirme en redes sociales!</h3>
@@ -64,26 +67,26 @@
     <div class="socialcont">
       <div class="social">
         <a href="https://www.instagram.com/cori.drawing/">
-          <img src="./drawings/static/Images/Instagram.svg" alt="">
+          <img src="./drawings/static/Images/Instagram.svg" alt="" class="img-fluid">
         </a>
       </div>
 
       <div class="social">
         <a href="https://www.facebook.com/cori.drawing/">
-          <img src="./drawings/static/Images/Facebook.svg" alt="">
+          <img src="./drawings/static/Images/Facebook.svg" alt="" class="img-fluid">
         </a>
       </div>
 
       <div class="social">
         <a href="https://twitter.com/CoriDrawing">
-          <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo">
+          <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo" class="img-fluid">
 
         </a>
       </div>
 
       <div class="social">
         <a href="mailto: coridrawing@gmail.com">
-          <img src="./drawings/static/Images/Mail.svg" alt="">
+          <img src="./drawings/static/Images/Mail.svg" alt="" class="img-fluid">
         </a>
       </div>
 
@@ -96,4 +99,5 @@
 
   </footer>
 
+  {% endblock footer %}
 </html>
