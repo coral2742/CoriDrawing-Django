@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url(https://raw.githubusercontent.com/coral2742/CoriDrawing/gh-pages/Imagen/Pinceles.jpg);">
+<header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url({{ category.image.url }});">
     <h1 style="padding-top: 150px; color: white;">{{ category.title }}🎨</h1>
     <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff; "></path></svg></div>
 </header>
@@ -17,7 +17,7 @@
   <div class="container-draws text-center" style="text-align: center; align-items: center; padding-bottom: 20px;">
     <div class="row align-items-center">
       <div class="col-sm">
-          <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
+          <img src={{ category.image.url }} class="figure-img img-fluid rounded-3" alt="foto cori">
       </div>
       <div class="col-sm container-fluid" >
           <h4 style="text-align: justify; margin-left:10%; margin-right:10%;" >{{ category.description }}</h4>
@@ -44,7 +44,7 @@
                               <div class="card-body">
                                   <h5 class="card-title">{{ drawing.title }}</h5>
                                   <p class="card-text">{{ drawing.description }}</p>
-                                  <img src="https://picsum.photos/500" class="img-fluid" alt="{{ draw.title }} photo">
+                                  <img src={{ drawing.image.url }} class="img-fluid" alt="{{ draw.title }} photo">
                               </div>
                           </div>
                       </div>

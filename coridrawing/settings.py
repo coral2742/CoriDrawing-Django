@@ -16,6 +16,11 @@ import os
 from pathlib import Path
 
 import dj_database_url
+import environ
+
+env = environ.Env()
+
+environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,19 +84,6 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 WSGI_APPLICATION = "coridrawing.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-# DATABASES["default"].update(dj_database_url.config(conn_max_age=600))
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -142,6 +134,14 @@ STATIC_URL = "/drawings/static/"
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = env('AWS_ID_KEY')
+AWS_SECRET_ACCESS_KEY = env('AWS_PASS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'coridrawing-bucket'
+AWS_QUERYSTRING_AUTH = False
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
