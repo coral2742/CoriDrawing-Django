@@ -38,13 +38,25 @@
               <div class="row justify-content-md-center">
 
                   {% for drawing in draws %}
-                      <div class="col-sm-4" style="text-align: center;">
+                      <div class="col-sm-5" style="text-align: center;">
                           <div class="card" style="justify-content: center; align-items: center; border-color: white;">
 
                               <div class="card-body">
                                   <h5 class="card-title">{{ drawing.title }}</h5>
                                   <p class="card-text">{{ drawing.description }}</p>
-                                  <img src={{ drawing.image.url }} class="img-fluid" alt="{{ draw.title }} photo">
+
+
+                                    <!-- Si tiene vídeo -->
+                                    {% if drawing.video != "" %}
+                                        <video class="col" src={{ drawing.video.url }} class="figure-img img-fluid" controls style="height: auto; max-width: 100%;"></video>
+                                    {% else %}
+                                        <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo" style="height: auto; max-width: 100%; object-fit: cover">
+                                    {% endif %}
+
+
+                                  
+
+
                               </div>
                           </div>
                       </div>

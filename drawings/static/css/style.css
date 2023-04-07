@@ -104,7 +104,10 @@ footer {
 
 
 
-
+.figure-img {
+  height: 500px;
+  overflow: hidden;
+}
 
 
 

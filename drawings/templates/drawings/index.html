@@ -18,7 +18,7 @@
     <div class="container text-center" style="text-align: center; align-items: center; padding: 20px;">
         <div class="row align-items-center">
           <div class="col-sm">
-              <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3" alt="foto cori">
+              <img src="https://coridrawing-bucket.s3.eu-north-1.amazonaws.com/images/coral.JPG" class="figure-img img-fluid rounded-3" alt="foto cori">
           </div>
           <div class="col-sm" >
               <h1 style="text-align: center">Sobre mí</h1>
@@ -26,29 +26,29 @@
                   He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
                   perderte nada.
               </h4>
+              
               <div class="socialcont">
                 <div class="social">
                   <a href="https://www.instagram.com/cori.drawing/">
-                    <img src="./drawings/static/Images/Instagram.svg" alt="Instagram logo" class="img-fluid">
+                    <img src="https://coridrawing-bucket.s3.eu-north-1.amazonaws.com/images/icons/Instagram.svg" alt="Instagram logo" class="img-fluid">
                   </a>
                 </div>
           
                 <div class="social">
                   <a href="https://www.facebook.com/cori.drawing/">
-                    <img src="./drawings/static/Images/Facebook.svg" alt="Facebook logo" class="img-fluid">
+                    <img src="https://coridrawing-bucket.s3.eu-north-1.amazonaws.com/images/icons/Facebook.svg" alt="Facebook logo" class="img-fluid">
                   </a>
                 </div>
           
                 <div class="social">
                   <a href="https://twitter.com/CoriDrawing">
-                    <img src="./drawings/static/Images/Twitter.svg" alt="Twitter logo" class="img-fluid">
-          
+                    <img src="https://coridrawing-bucket.s3.eu-north-1.amazonaws.com/images/icons/Twitter.svg" alt="Twitter logo" class="img-fluid">
                   </a>
                 </div>
           
                 <div class="social">
                   <a href="mailto: coridrawing@gmail.com">
-                    <img src="./drawings/static/Images/Mail.svg" alt="Mail logo" class="img-fluid">
+                    <img src="https://coridrawing-bucket.s3.eu-north-1.amazonaws.com/images/icons/Mail.svg" alt="Mail logo" class="img-fluid">
                   </a>
                 </div>
           
@@ -75,7 +75,7 @@
                             <a href="{% url 'draws' category.short_title %}">
                               <div class="imagen-port">
                                 
-                                  <img src="https://picsum.photos/300" class="figure-img img-fluid" alt="foto category" href="{% url 'index' %}">
+                                  <img src={{ category.image.url }} class="figure-img img-fluid" alt="foto category" href="{% url 'index' %}">
 
                                   <div class="hover-galeria">
                                       <p class="category-text">{{ category.title }}</p>
