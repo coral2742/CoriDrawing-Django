@@ -12,6 +12,7 @@ header {
   background-attachment: fixed;
   z-index: -1;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .container-draws {

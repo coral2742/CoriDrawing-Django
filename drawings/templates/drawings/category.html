@@ -30,7 +30,7 @@
   </div>
 
 
-  <div class="container-fluid text-center" style="background-color:rgba(235, 45, 73, 0.36);">
+  <div class="container-fluid text-center" style="background-color:#eb2d495c;">
       {% if draws %}
           <h1>Dibujos con {{ category.title }}</h1>
 
@@ -48,9 +48,9 @@
 
                                     <!-- Si tiene vídeo -->
                                     {% if drawing.video != "" %}
-                                        <video class="col" src={{ drawing.video.url }} class="figure-img img-fluid" controls style="height: auto; max-width: 100%;"></video>
+                                        <video class="col" src={{ drawing.video.url }} class="figure-img img-fluid" controls style="height: auto; max-width: 100%;  border: 8px solid #eb2d495c;"></video>
                                     {% else %}
-                                        <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo" style="height: auto; max-width: 100%; object-fit: cover">
+                                        <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo" style="height: auto; max-width: 100%; object-fit: cover;  border: 8px solid #eb2d495c;">
                                     {% endif %}
 
 

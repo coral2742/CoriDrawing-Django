@@ -15,6 +15,7 @@ class DrawingCategory(models.Model):
 class DrawingItem(models.Model):
     title = models.CharField("Title", max_length=200, unique=True)
     type = models.ForeignKey(DrawingCategory, on_delete=models.CASCADE)
+    priority = models.PositiveIntegerField(default=0)
     description = models.TextField("Description", max_length=500, blank=True)
     image = models.ImageField(upload_to="images", default="images/Error404.jpg")
     video = models.FileField(upload_to="videos", blank=True)

@@ -30,5 +30,5 @@ class DrawingListView(ListView):
 
     def get_queryset(self):
         category_short_title = self.kwargs["short_title"]
-        queryset = DrawingItem.objects.filter(type__short_title__iexact=category_short_title)
+        queryset = DrawingItem.objects.filter(type__short_title__iexact=category_short_title).order_by('priority')
         return queryset
