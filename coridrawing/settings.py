@@ -96,7 +96,7 @@ WSGI_APPLICATION = "coridrawing.wsgi.application"
 # }
 
 
-# if 'RDS_DB_NAME' in os.environ:
+if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -106,18 +106,18 @@ WSGI_APPLICATION = "coridrawing.wsgi.application"
             'HOST': os.environ['RDS_HOSTNAME'],
             'PORT': os.environ['RDS_PORT'],
         }
-    # }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'NAME': 'nhcrzkjj',
-#             'USER': 'nhcrzkjj',
-#             'PASSWORD': 'KVeDY8gc2ZoTcCKTul8CKiGUgVOmwPh7',
-#             'HOST': 'mel.db.elephantsql.com',
-#             'PORT': '5432'
-#         }
-#     }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'nhcrzkjj',
+            'USER': 'nhcrzkjj',
+            'PASSWORD': 'KVeDY8gc2ZoTcCKTul8CKiGUgVOmwPh7',
+            'HOST': 'mel.db.elephantsql.com',
+            'PORT': '5432'
+        }
+    }
 
 
 # Password validation
