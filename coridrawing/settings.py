@@ -36,7 +36,7 @@ SECRET_KEY = "django-insecure-9@&4apqyb_oq+srxc83an3y2ge+-qyk!kdgk(=qysorx(^%ts&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS=['CoriDrawing.eu-north-1.elasticbeanstalk.com']
 
 
 # Application definition
