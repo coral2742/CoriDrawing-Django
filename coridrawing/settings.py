@@ -96,15 +96,15 @@ WSGI_APPLICATION = "coridrawing.wsgi.application"
 # }
 
 
-if 'RDS_DB_NAME' in os.environ:
+if 'RDS_DB_NAME' in env:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT'],
+            'NAME': env['RDS_DB_NAME'],
+            'USER': env['RDS_USERNAME'],
+            'PASSWORD': env['RDS_PASSWORD'],
+            'HOST': env['RDS_HOSTNAME'],
+            'PORT': env['RDS_PORT'],
         }
     }
 else:
