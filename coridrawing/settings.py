@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS=['CoriDrawing.eu-north-1.elasticbeanstalk.com']
 
@@ -148,4 +148,4 @@ AWS_QUERYSTRING_AUTH = False
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-WHITENOISE_USE_FINDERS = True
+WHITENOISE_USE_FINDERS = False
