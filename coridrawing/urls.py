@@ -8,3 +8,4 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += staticfiles_urlpatterns()
