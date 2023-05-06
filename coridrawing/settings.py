@@ -36,7 +36,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=['CoriDrawing.eu-north-1.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS=['CoriDrawing.eu-north-1.elasticbeanstalk.com', '127.0.0.1', '172.31.13.126']
 
 
 # Application definition
