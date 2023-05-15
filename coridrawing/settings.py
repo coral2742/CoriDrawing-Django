@@ -34,9 +34,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS=['CoriDrawing.eu-north-1.elasticbeanstalk.com', '127.0.0.1', '172.31.13.126']
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = "coridrawing.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('RDS_DB_NAME'),
         'USER': env('RDS_USERNAME'),
         'PASSWORD': env('RDS_PASSWORD'),
@@ -135,12 +135,12 @@ STATIC_URL = "/drawings/static/"
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = env('AWS_ID_KEY')
-AWS_SECRET_ACCESS_KEY = env('AWS_PASS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'coridrawing-bucket'
-AWS_QUERYSTRING_AUTH = False
+# AWS_ACCESS_KEY_ID = env('AWS_ID_KEY')
+# AWS_SECRET_ACCESS_KEY = env('AWS_PASS_KEY')
+# AWS_STORAGE_BUCKET_NAME = 'coridrawing-bucket'
+# AWS_QUERYSTRING_AUTH = False
 
 
 # Default primary key field type
