@@ -20,5 +20,10 @@ class DrawingItem(models.Model):
     image = models.ImageField(upload_to="images", default="images/Error404.jpg")
     video = models.FileField(upload_to="videos", blank=True)
 
+    def video_url(self):
+        if self.video:
+            return f"https://res.cloudinary.com/dkny1x3tp/video/upload/{self.video.name}"
+        return None
+
     def __str__(self):
         return f"{self.title}"
