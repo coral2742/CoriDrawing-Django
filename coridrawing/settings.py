@@ -141,6 +141,7 @@ MEDIA_URL = "media/"  # Public URL at the browser
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 CLOUDINARY_URL = env('CLOUDINARY_URL')
+cloudinary_url_base = env('CLOUDINARY_URL_BASE')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

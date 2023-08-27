@@ -50,7 +50,7 @@
 
                                     <!-- Si tiene vídeo -->
                                     {% if drawing.video != "" %}
-                                        <video class="col" src={{ drawing.video.url }} class="figure-img img-fluid" controls style="height: auto; max-width: 100%;  border: 8px solid #eb2d495c;"></video>
+                                        <video class="col" src="{{ cloudinary_url_base }}/{{ drawing.video.url }}" class="figure-img img-fluid" controls style="height: auto; max-width: 100%;  border: 8px solid #eb2d495c;"></video>
                                     {% else %}
                                         <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo" style="height: auto; max-width: 100%; object-fit: cover;  border: 8px solid #eb2d495c;">
                                     {% endif %}
