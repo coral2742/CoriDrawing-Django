@@ -4,14 +4,10 @@
 
 
 <header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url(https://res.cloudinary.com/dkny1x3tp/image/upload/v1684164536/media/images/Pinceles_cqseff.jpg); filter: none;">
-    <h1 style="padding-top: 150px; color: white;">Bienvenid@ a Cori Drawing🎨</h1>
+    <h1 style="padding-top: 6rem; color: white;">Bienvenid@ a Cori Drawing🎨</h1>
     <h3 style="padding: 20px; color: white;">Aquí guardo algunos de los dibujos que voy haciendo</h3>
     <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff; "></path></svg></div>
 </header>
-
-
-
-
 
 
 <body>
@@ -20,7 +16,7 @@
           <div class="col-sm text-center">
               <img src="https://picsum.photos/500" class="figure-img img-fluid rounded-3 h-100 object-fit-cover" alt="foto cori">
           </div>
-          <div class="col-sm" >
+          <div class="col-sm">
               <h1 style="text-align: center">Sobre mí</h1>
               <h4 style="text-align: justify">Me llamo Coral, soy estudiante de <span class="underline-main">Ingeniería Informática del Software</span> y en mi tiempo libre me gusta dibujar y pintar entre otras cosas. <br><br>
                   He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
@@ -78,14 +74,14 @@
                                 
                                   <img src={{ category.image.url }} class="figure-img img-fluid" alt="foto category" href="{% url 'index' %}">
 
-                                  <div class="hover-galeria">
+                                  <div class="hover-galeria" style="font-family: 'Kolker Brush', cursive;"">
                                       <p class="category-text">{{ category.title }}</p>
                                   </div>
                               </div>
                             </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ category.title }}</h5>
-                            <p class="card-text">{{ category.description }}</p>
+                            <p class="card-text">{{ category.short_description }}</p>
                         </div>
                         </div>
                     </div>
