@@ -3,6 +3,7 @@ from django.views.generic import ListView, View
 from django.shortcuts import get_object_or_404
 
 from .models import DrawingItem, DrawingCategory
+from django.conf import settings
 
 class Index(ListView):
     template_name = "drawings/index.html"
@@ -13,6 +14,7 @@ class Index(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = DrawingCategory.objects.all().order_by('priority')
+        context["CLOUDINARY_URL_MEDIA"] = settings.CLOUDINARY_URL_MEDIA
         return context
 
 
