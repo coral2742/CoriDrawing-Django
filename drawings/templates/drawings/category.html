@@ -5,9 +5,15 @@
 
 
 <header style="position: relative; background-size: cover;">
-    <div style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url({{ category.background.url }}); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: blur(10px); z-index: -1;"></div>
+    <div
+        style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url({{ category.background.url }}); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: blur(10px); z-index: -1;">
+    </div>
     <h1 style="padding-top: 6rem; color:white; font-size: 6rem; font-family: 'Kolker Brush', cursive;">{{ category.title }}</h1>
-    <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff; "></path></svg></div>
+    <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;"><svg
+            viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff; "></path>
+        </svg></div>
 </header>
 
 
@@ -15,58 +21,59 @@
 <body>
     <div class="container text-center" style="text-align: center; align-items: center; padding: 20px;">
         <div class="row align-items-center">
-          <div class="col-sm text-center" style="height: 15rem;">
-            <img src={{ category.image.url }} class="figure-img img-fluid rounded-3 h-100 object-fit-cover" alt="foto cori">
-          </div>
-          <div class="col-sm container-fluid" >
-            <h4 style="text-align: justify; margin-left:10%; margin-right:10%;" >{{ category.description }}</h4>
+            <div class="col-sm text-center" style="height: 15rem;">
+                <img src={{ category.image.url }} class="figure-img img-fluid rounded-3 h-100 object-fit-cover"
+                    alt="foto cori">
+            </div>
+            <div class="col-sm container-fluid">
+                <h4 style="text-align: justify; margin-left:10%; margin-right:10%;">{{ category.description }}</h4>
     
-          </div>
+            </div>
         </div>
-
-
-
+    
+    
+    
     </div>
 
-  </div>
+
+    <div class="draws-container container-fluid text-center" style="background-color:#eb2d495c;">
+        {% if draws %}
+            <h1>Dibujos con {{ category.title }}</h1>
+
+            <div class="container" style="background-color: white; padding: 60px;">
+                <div class="row justify-content-center">
+
+                    {% for drawing in draws %}
+                    <div class="col-sm-5 text-center" style="text-align: center;">
+                        <div class="card" style="justify-content: center; align-items: center; border-color: white;">
+
+                            <div class="card-body">
+                                <h5 class="card-title">{{ drawing.title }}</h5>
+                                <p class="card-text">{{ drawing.description }}</p>
+
+                                <!-- Si tiene vídeo -->
+                                {% if drawing.video %}
+                                <video class="col" src="{{ drawing.video_url }}" class="figure-img img-fluid" controls
+                                    style="height: auto; max-width: 100%;  border: 8px solid #eb2d495c;"></video>
+                                {% else %}
+                                <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo"
+                                    style="height: auto; max-width: 100%; object-fit: cover;  border: 8px solid #eb2d495c;">
+                                {% endif %}
 
 
-  <div class="draws-container container-fluid text-center" style="background-color:#eb2d495c;">
-      {% if draws %}
-          <h1>Dibujos con {{ category.title }}</h1>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="container" style="background-color: white; padding: 60px;">
-              <div class="row justify-content-center">
+                    {% endfor %}
 
-                  {% for drawing in draws %}
-                      <div class="col-sm-5 text-center" style="text-align: center;">
-                          <div class="card" style="justify-content: center; align-items: center; border-color: white;">
+                </div>
+            </div>
 
-                              <div class="card-body">
-                                  <h5 class="card-title">{{ drawing.title }}</h5>
-                                  <p class="card-text">{{ drawing.description }}</p>
-
-                                    <!-- Si tiene vídeo -->
-                                    {% if drawing.video %}
-                                        <video class="col" src="{{ drawing.video_url }}" class="figure-img img-fluid" controls style="height: auto; max-width: 100%;  border: 8px solid #eb2d495c;"></video>
-                                    {% else %}
-                                        <img src={{ drawing.image.url }} class="figure-img img-fluid" alt="{{ draw.title }} photo" style="height: auto; max-width: 100%; object-fit: cover;  border: 8px solid #eb2d495c;">
-                                    {% endif %}
-
-
-                              </div>
-                          </div>
-                      </div>
-
-                  {% endfor %}
-
-              </div>
-          </div>
-
-      {% else %}
-          <h1>No hay dibujos disponibles en la categoría de {{ category.title }}</h1>
-      {% endif %}
-  </div>
+        {% else %}
+            <h1>No hay dibujos disponibles en la categoría de {{ category.title }}</h1>
+        {% endif %}
+    </div>
 
 
 </body>

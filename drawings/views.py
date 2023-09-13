@@ -28,9 +28,22 @@ class DrawingListView(ListView):
         category_short_title = self.kwargs["short_title"]
         category = get_object_or_404(DrawingCategory, short_title__iexact=category_short_title)
         context['category'] = category
+        context["CLOUDINARY_URL_MEDIA"] = settings.CLOUDINARY_URL_MEDIA
         return context
 
     def get_queryset(self):
         category_short_title = self.kwargs["short_title"]
         queryset = DrawingItem.objects.filter(type__short_title__iexact=category_short_title).order_by('priority')
         return queryset
+    
+
+class Custom404View(ListView):
+    template_name = "404.html"
+    model = DrawingCategory
+    context_object_name = "error"
+    
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["CLOUDINARY_URL_MEDIA"] = settings.CLOUDINARY_URL_MEDIA
+        return context
