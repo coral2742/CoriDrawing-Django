@@ -4,8 +4,8 @@
 
 
 <header style="background: linear-gradient(to right, rgba(51, 51, 153, 0.271), rgba(255, 0, 204, 0.251)), url('{{ CLOUDINARY_URL_MEDIA }}images/Pinceles_cqseff.jpg'); filter: none;">
-    <h1 style="padding-top: 6rem; color: white;">Bienvenid@ a Cori Drawing🎨</h1>
-    <h3 style="padding: 20px; color: white;">Aquí guardo algunos de los dibujos que voy haciendo</h3>
+    <h1 style="padding-top: 6rem; color: white; font-family: 'Calibri';">Bienvenid@ a Cori Drawing🎨</h1>
+    <h3 style="padding: 20px; color: white; font-family: 'Calibri';">Aquí guardo algunos de los dibujos que voy haciendo</h3>
     <div class="wave" style="height: 150px; overflow: hidden; position: absolute; bottom: 0; width: 100%;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff; "></path></svg></div>
 </header>
 
@@ -14,12 +14,12 @@
     <div class="container text-center" style="text-align: center; align-items: center; padding: 20px;">
         <div class="row align-items-center">
           <div class="col-sm text-center">
-              <img src="{{ CLOUDINARY_URL_MEDIA }}images/Coral_tbnb70.jpg" class="figure-img img-fluid rounded-3 h-100 object-fit-cover" alt="foto cori">
+              <img src="{{ CLOUDINARY_URL_MEDIA }}images/wd6nyadkwrs51shvqe75.png" class="figure-img img-fluid rounded-3 h-100 object-fit-cover" alt="foto cori"  style="width: 30rem;">
           </div>
-          <div class="col-sm">
-              <h1 style="text-align: center">Sobre mí</h1>
-              <h4 style="text-align: justify">Me llamo Coral, soy estudiante de <span class="underline-main">Ingeniería Informática del Software</span> y en mi tiempo libre me gusta dibujar y pintar entre otras cosas. <br><br>
-                  He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
+          <div class="col-sm" style="font-family: 'Poppins Medium';">
+              <h1 style="text-align: center; font-family: 'Calibri'; font-weight: bold;"">Sobre mí</h1>
+              <h4 style="text-align: justify">Me llamo Coral, soy estudiante de <span class="underline-main" style="font-weight: bold;">Ingeniería Informática del Software</span> y en mi tiempo libre me gusta dibujar y pintar entre otras cosas. <br><br>
+                  He desarrollado esta página web como portfolio para mostrar mis <span class="underline-main" style="font-weight: bold;">dibujos</span>, pero también puedes seguirme en mis redes sociales para no 
                   perderte nada.
               </h4>
               
@@ -60,7 +60,7 @@
 
 
     <div class="container-fluid text-center" style="background-color:#3333996c;">
-        <h1>Categorías</h1>
+        <h1 style="font-family: 'Calibri'; font-weight: bold;">Categorías</h1>
 
         <div class="container text-center" style="background-color: white; padding: 60px;">
             <div class="row justify-content-md-center">
@@ -68,20 +68,19 @@
                 {% for category in categories %}
                     <div class="col-sm-4" style="text-align: center;">
                         <div class="card" style="justify-content: center; align-items: center; border-color: white;">
-                            <!-- <img src="https://picsum.photos/300" class="figure-img img-fluid rounded-circle" alt="foto category"> -->
                             <a href="{% url 'draws' category.short_title %}">
                               <div class="imagen-port">
                                 
                                   <img src={{ category.image.url }} class="figure-img img-fluid" alt="foto category" href="{% url 'index' %}">
 
-                                  <div class="hover-galeria" style="font-family: 'Kolker Brush', cursive;"">
+                                  <div class="hover-galeria" style="font-family: 'Kolker Brush', cursive;">
                                       <p class="category-text">{{ category.title }}</p>
                                   </div>
                               </div>
                             </a>
                         <div class="card-body">
-                            <h5 class="card-title">{{ category.title }}</h5>
-                            <p class="card-text">{{ category.short_description }}</p>
+                            <h5 class="card-title" style="font-family: 'Calibri'; font-weight: bold;">{{ category.title }}</h5>
+                            <p class="card-text" style="font-family: 'Poppins Medium';">{{ category.short_description }}</p>
                         </div>
                         </div>
                     </div>
