@@ -26,7 +26,7 @@
                     alt="foto cori">
             </div>
             <div class="col-sm container-fluid">
-                <h4 style="text-align: justify; margin-left:10%; margin-right:10%; font-family: 'Poppins Medium';">{{ category.description }}</h4>
+                <h4 style="text-align: justify; margin-left:10%; margin-right:10%; font-family: 'Poppins', sans-serif;">{{ category.description }}</h4>
     
             </div>
         </div>
@@ -49,7 +49,7 @@
 
                             <div class="card-body">
                                 <h5 class="card-title" style="font-family: 'Calibri'; font-weight: bold;">{{ drawing.title }}</h5>
-                                <p class="card-text" style="font-family: 'Poppins Medium';">{{ drawing.description }}</p>
+                                <p class="card-text" style="font-family: 'Poppins', sans-serif;">{{ drawing.description }}</p>
 
                                 <!-- Si tiene vídeo -->
                                 {% if drawing.video %}
@@ -71,7 +71,7 @@
             </div>
 
         {% else %}
-            <h1 style="font-family: 'Poppins Medium';">No hay dibujos disponibles en la categoría de {{ category.title }}</h1>
+            <h1 style="font-family: 'Poppins', sans-serif;">No hay dibujos disponibles en la categoría de {{ category.title }}</h1>
         {% endif %}
     </div>
 
