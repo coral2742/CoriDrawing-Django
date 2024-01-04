@@ -2,7 +2,7 @@
 
 - [CoriDrawing (Django)](#coridrawing-django)
   - [English](#english)
-  - [Spanish](#spanish)
+  - [Español](#español)
 
 
 ![CoriDrawing](images/CoriDrawing.gif)
@@ -16,11 +16,11 @@ CoriDrawing🎨 is a personal portfolio where I show my drawings made with diffe
 
 - 🖌 Besides learning, it allowed me to apply my skills in a personal project while enjoying my hobby of drawing and painting as a way to disconnect.
 
-🎨 [CoriDrawing website](https://coridrawing.zeabur.app/)
+🎨 [CoriDrawing website](https://coridrawing.onrender.com/)
 
 
 
-## Spanish
+## Español
 
 CoriDrawing🎨 es un porfolio personal donde muestro mis dibujos realizados con diferentes técnicas de pintura como acrílico, carboncillo, lápiz, digital y tinta china entre otras técnicas, además de modelos 3D creados con SketchUp.
 
@@ -30,4 +30,4 @@ CoriDrawing🎨 es un porfolio personal donde muestro mis dibujos realizados con
 
 - 🖌 Además de aprender, me permitió aplicar mis habilidades en un proyecto personal mientras disfruto de mi hobbie de dibujar y pintar como forma de desconectar.
 
-🎨 [Página web CoriDrawing](https://coridrawing.zeabur.app/)
+🎨 [Página web CoriDrawing](https://coridrawing.onrender.com/)
