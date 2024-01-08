@@ -12,7 +12,7 @@ CoriDrawing🎨 is a personal portfolio where I show my drawings made with diffe
 
 - 🌐 This project initially started as an Instagram account [@cori.drawing](https://www.instagram.com/cori.drawing/), but I decided to expand this idea by making my own website learning new technologies.
 
-- 💻 During this process, I was able to learn and practice new technologies like **Django**, **Bootstrap** and databases like **PosgreSQL** allowing me to improve my programming and web design skills.
+- 💻 During this process, I was able to learn and practice new technologies like **Django**, **Bootstrap** and databases like **PostgreSQL** allowing me to improve my programming and web design skills.
 
 - 🖌 Besides learning, it allowed me to apply my skills in a personal project while enjoying my hobby of drawing and painting as a way to disconnect.
 
@@ -26,7 +26,7 @@ CoriDrawing🎨 es un porfolio personal donde muestro mis dibujos realizados con
 
 - 🌐 Este proyecto comenzó inicialmente como una cuenta de Instagram [@cori.drawing](https://www.instagram.com/cori.drawing/), pero decidí ampliar esta idea realizando mi propia página web aprendiendo nuevas tecnologías.
 
-- 💻 Durante este proceso, he podido aprender y practicar nuevas tecnologías como **Django**, **Bootstrap** y bases de datos como **PosgreSQL** permitiéndome mejorar mis habilidades de programación y diseño web.
+- 💻 Durante este proceso, he podido aprender y practicar nuevas tecnologías como **Django**, **Bootstrap** y bases de datos como **PostgreSQL** permitiéndome mejorar mis habilidades de programación y diseño web.
 
 - 🖌 Además de aprender, me permitió aplicar mis habilidades en un proyecto personal mientras disfruto de mi afición de dibujar y pintar como forma de desconectar.
 
