@@ -28,6 +28,6 @@ CoriDrawing🎨 es un porfolio personal donde muestro mis dibujos realizados con
 
 - 💻 Durante este proceso, he podido aprender y practicar nuevas tecnologías como **Django**, **Bootstrap** y bases de datos como **PosgreSQL** permitiéndome mejorar mis habilidades de programación y diseño web.
 
-- 🖌 Además de aprender, me permitió aplicar mis habilidades en un proyecto personal mientras disfruto de mi hobby de dibujar y pintar como forma de desconectar.
+- 🖌 Además de aprender, me permitió aplicar mis habilidades en un proyecto personal mientras disfruto de mi afición de dibujar y pintar como forma de desconectar.
 
 🎨 [Página web CoriDrawing](https://coridrawing.onrender.com/)
