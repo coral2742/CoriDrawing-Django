@@ -32,9 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+CLOUDINARY_URL = env('CLOUDINARY_URL')
+CLOUDINARY_URL_MEDIA = env('CLOUDINARY_URL_MEDIA')
+CLOUDINARY_CLOUD_NAME = env('CLOUDINARY_CLOUD_NAME')
+CLOUDINARY_API_KEY = env('CLOUDINARY_API_KEY')
+CLOUDINARY_API_SECRET = env('CLOUDINARY_API_SECRET')
+DEBUG = True
 
 ALLOWED_HOSTS=['*']
 
@@ -86,15 +89,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 WSGI_APPLICATION = "coridrawing.wsgi.application"
 
+DATABASE_URL = env('DATABASE_URL')
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('RDS_DB_NAME'),
-        'USER': env('RDS_USERNAME'),
-        'PASSWORD': env('RDS_PASSWORD'),
-        'HOST': env('RDS_HOSTNAME'),
-        'PORT': env('RDS_PORT'),
-    }
+    'default': dj_database_url.config(
+        default=DATABASE_URL,
+        conn_max_age=600
+    )
 }
 
 
